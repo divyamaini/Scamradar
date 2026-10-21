@@ -359,6 +359,10 @@ const PAGE = String.raw`<!DOCTYPE html><html lang="en"><head><meta charset="utf-
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SCAMRADAR — See the scam before it sees you</title>
 <meta name="description" content="Live scam news, threat radar, risk scanner and emergency help for Instagram, Facebook, websites, WhatsApp and UPI scams in India.">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2610065563716071"
+     crossorigin="anonymous"></script>
+
 <style>
 :root{--bg:#05060d;--c:#18f0ff;--r:#ff2e63;--y:#ffd23f;--g:#2ee6a6;--t:#e8ecff;--m:#7d86b8;--card:rgba(16,18,40,.6)}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
