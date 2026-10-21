@@ -356,6 +356,16 @@ const server = http.createServer(async (req, res) => {
 
 /* ================= FRONTEND ================= */
 const PAGE = String.raw`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PB9GCGLQJX">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PB9GCGLQJX');
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SCAMRADAR — See the scam before it sees you</title>
 <meta name="description" content="Live scam news, threat radar, risk scanner and emergency help for Instagram, Facebook, websites, WhatsApp and UPI scams in India.">
