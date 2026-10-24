@@ -288,7 +288,15 @@ const server = http.createServer(async (req, res) => {
   const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
   const url = req.url.split('?')[0], GET = req.method === 'GET', POST = req.method === 'POST';
   try {
-    if (GET && url === '/') return send(res, 200, PAGE, 'text/html; charset=utf-8');
+     
+if (GET && url === '/ads.txt') {
+  return send(res, 200,
+    'google.com, pub-2610065563716071, DIRECT, f08c47fec0942fa0\n',
+    'text/plain; charset=utf-8');
+}
+
+     if (GET && url === '/') return send(res, 200, PAGE, 'text/html; charset=utf-8');
+     
     if (GET && url === '/admin') return send(res, 200, ADMIN_PAGE, 'text/html; charset=utf-8');
     if (GET && url === '/health') return send(res, 200, {ok:true, db:useDB, reports:reports.length, news:news.length});
     if (GET && url === '/api/scams') return send(res, 200, {scams:SCAMS, platforms:PLATFORMS, weekly:weekly(),
@@ -372,7 +380,6 @@ const PAGE = String.raw`<!DOCTYPE html><html lang="en"><head><meta charset="utf-
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2610065563716071"
      crossorigin="anonymous"></script>
-
 <style>
 :root{--bg:#05060d;--c:#18f0ff;--r:#ff2e63;--y:#ffd23f;--g:#2ee6a6;--t:#e8ecff;--m:#7d86b8;--card:rgba(16,18,40,.6)}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
