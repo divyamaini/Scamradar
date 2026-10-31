@@ -1,3 +1,4 @@
+require('./app-mode.js');
 /* SCAMRADAR v2 - one file: backend + database + live news + website
    Optional env vars: SUPABASE_URL, SUPABASE_KEY (database), ADMIN_PASSWORD (admin page), DATA_DIR, PORT */
 const http = require('http'), fs = require('fs'), path = require('path'), crypto = require('crypto');
