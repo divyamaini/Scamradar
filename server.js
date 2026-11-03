@@ -1,3 +1,4 @@
+require('./ads-fix.js');
 require('./ai-helper.js');
 require('./app-mode.js');
 require('./read-aloud.js');
