@@ -1,3 +1,5 @@
+require('./seo.js');
+require('./what-now.js');
 require('./ads-fix.js');
 require('./ai-helper.js');
 require('./app-mode.js');
